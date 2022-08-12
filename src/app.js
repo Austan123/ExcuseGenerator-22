@@ -1,22 +1,20 @@
 /* eslint-disable */
-import "bootstrap";
-import "./style.css";
+// import "bootstrap";
+// import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  function domainGenerator() {
-    let pronoun = ["the", "our"];
-    let adj = ["great", "big"];
-    let noun = ["jogger", "racoon"];
-    for (let i = 0; i < pronoun.length; i++) {
-      for (let f = 0; f < adj.length; f++) {
-        for (let g = 0; g < noun.length; g++) {
-          console.log(pronoun[i] + adj[f] + noun[g] + ".com");
-        }
-      }
-    }
-  }
-  domainGenerator();
-};
+let who = ["The dog", "My grandma", "His turtle", "My bird"];
+let action = ["ate", "peed", "crushed", "broke"];
+let what = ["my homework", "the keys", "the car"];
+let when = [
+  "before the class",
+  "right on time",
+  "when I finished",
+  "during my lunch",
+  "while I was praying"
+];
+let who_arry = who[Math.floor(Math.random() * who.length)];
+let action_arry = action[Math.floor(Math.random() * action.length)];
+let what_arry = what[Math.floor(Math.random() * what.length)];
+let when_arry = when[Math.floor(Math.random() * when.length)];
+let result = who_arry + " " + action_arry + " " + what_arry + " " + when_arry;
+document.getElementById("excuse").innerHTML = result;
